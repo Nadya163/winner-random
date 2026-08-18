@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a0a2e"/>
+      <stop offset="1" stop-color="#0d0d1a"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c84bff"/>
+      <stop offset="1" stop-color="#ff4b8b"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#bg)"/>
+  <rect x="8" y="8" width="104" height="104" rx="20" fill="none" stroke="#2d2d5e" stroke-width="2"/>
+  <!-- Кубок -->
+  <path d="M40 28 h40 v28 c0 16-12 26-20 28 c-8-2-20-12-20-28 Z" fill="url(#grad)"/>
+  <rect x="52" y="84" width="16" height="8" rx="3" fill="url(#grad)"/>
+  <rect x="44" y="92" width="32" height="6" rx="3" fill="url(#grad)"/>
+  <!-- Ручки кубка -->
+  <path d="M40 36 Q28 36 28 50 Q28 62 40 62" fill="none" stroke="url(#grad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M80 36 Q92 36 92 50 Q92 62 80 62" fill="none" stroke="url(#grad)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Звезда сверху -->
+  <circle cx="60" cy="20" r="7" fill="#ffb84b"/>
+</svg>
