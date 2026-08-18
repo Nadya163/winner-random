@@ -1,104 +1,226 @@
 <!doctype html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Рандомайзер для конкурса — выбрать случайного победителя онлайн</title>
-<meta name="description" content="Онлайн-рандомайзер для конкурсов и гивэев. Вставьте участников списком и выберите одного или нескольких победителей случайно и честно.">
-<link rel="canonical" href="https://winner-random.ru/randomaizer-konkurs.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Рандомайзер для конкурса — выбрать случайного победителя онлайн">
-<meta property="og:description" content="Онлайн-рандомайзер для конкурсов и гивэев. Вставьте участников списком и выберите одного или нескольких победителей случайно и честно.">
-<meta property="og:url" content="https://winner-random.ru/randomaizer-konkurs.html">
-<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-<!-- YANDEX_METRIKA -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Рандомайзер для конкурса — выбрать случайного победителя онлайн
+    </title>
+    <meta
+      name="description"
+      content="Онлайн-рандомайзер для конкурсов и гивэев. Вставьте участников списком и выберите одного или нескольких победителей случайно и честно."
+    />
+    <link
+      rel="canonical"
+      href="https://winner-random.ru/randomaizer-konkurs.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Рандомайзер для конкурса — выбрать случайного победителя онлайн"
+    />
+    <meta
+      property="og:description"
+      content="Онлайн-рандомайзер для конкурсов и гивэев. Вставьте участников списком и выберите одного или нескольких победителей случайно и честно."
+    />
+    <meta
+      property="og:url"
+      content="https://winner-random.ru/randomaizer-konkurs.html"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        ((k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a));
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js?id=111718208",
+        "ym",
+      );
 
-<header class="site-header">
-  <div class="container">
-    <a href="./index.html" class="brand">
-      <img src="./favicon.svg" alt="Winner Random">
-      <span>Winner Random</span>
-    </a>
-    <nav class="site-nav">
-      <a href="./index.html">Рандомайзер</a>
-      <a href="./randomaizer-vk.html">ВКонтакте</a>
-      <a href="./randomaizer-konkurs.html" class="active">Конкурс</a>
-      <a href="./sluchain-vybor-cheloveka.html">Случайный выбор</a>
-      <a href="./giveaway-randomaizer.html">Giveaway</a>
-      <a href="./rozygrysh-pobediteley.html">Розыгрыш</a>
-    </nav>
-  </div>
-</header>
+      ym(111718208, "init", {
+        ssr: true,
+        webvisor: true,
+        clickmap: true,
+        ecommerce: "dataLayer",
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce: true,
+        trackLinks: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/111718208"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
 
-<main>
-  <section class="hero container">
-    <h1><span>Рандомайзер для конкурса — случайный выбор победителя</span></h1>
-    <p class="lead">Проведите честный конкурс: вставьте список участников, укажите сколько победителей нужно выбрать, и нажмите кнопку.</p>
-  </section>
-
-  <div class="container">
-    <div class="tool-card">
-      <div class="field">
-        <label for="participants">Список участников <span>— каждый с новой строки</span></label>
-        <textarea id="participants" placeholder="Иван Иванов&#10;Мария Петрова&#10;Алексей Сидоров&#10;..."></textarea>
+    <header class="site-header">
+      <div class="container">
+        <a href="./index.html" class="brand">
+          <img src="./favicon.svg" alt="Winner Random" />
+          <span>Winner Random</span>
+        </a>
+        <nav class="site-nav">
+          <a href="./index.html">Рандомайзер</a>
+          <a href="./randomaizer-vk.html">ВКонтакте</a>
+          <a href="./randomaizer-konkurs.html" class="active">Конкурс</a>
+          <a href="./sluchain-vybor-cheloveka.html">Случайный выбор</a>
+          <a href="./giveaway-randomaizer.html">Giveaway</a>
+          <a href="./rozygrysh-pobediteley.html">Розыгрыш</a>
+        </nav>
       </div>
-      <p class="counter">Участников: <span id="participantCount">0</span></p>
-      <div class="options-row">
-        <label>Победителей:
-          <input type="number" id="winnerCount" value="1" min="1" max="100">
-        </label>
-        <label>
-          <input type="checkbox" id="removeWinner">
-          Удалить победителя из списка
-        </label>
-      </div>
-      <button class="btn-draw" id="btnDraw">🎲 Выбрать победителя</button>
+    </header>
 
-      <div class="result-wrap" id="resultWrap">
-        <div class="winner-display" id="winnerDisplay">
-          <span class="winner-emoji">🏆</span>
-          <div id="singleWinner">
-            <p class="winner-label">Победитель</p>
-            <div class="winner-name" id="winnerName"></div>
+    <main>
+      <section class="hero container">
+        <h1>
+          <span>Рандомайзер для конкурса — случайный выбор победителя</span>
+        </h1>
+        <p class="lead">
+          Проведите честный конкурс: вставьте список участников, укажите сколько
+          победителей нужно выбрать, и нажмите кнопку.
+        </p>
+      </section>
+
+      <div class="container">
+        <div class="tool-card">
+          <div class="field">
+            <label for="participants"
+              >Список участников <span>— каждый с новой строки</span></label
+            >
+            <textarea
+              id="participants"
+              placeholder="Иван Иванов&#10;Мария Петрова&#10;Алексей Сидоров&#10;..."
+            ></textarea>
           </div>
-          <div class="multiple-winners" id="multipleWinners" style="display:none;"></div>
+          <p class="counter">
+            Участников: <span id="participantCount">0</span>
+          </p>
+          <div class="options-row">
+            <label
+              >Победителей:
+              <input
+                type="number"
+                id="winnerCount"
+                value="1"
+                min="1"
+                max="100"
+              />
+            </label>
+            <label>
+              <input type="checkbox" id="removeWinner" />
+              Удалить победителя из списка
+            </label>
+          </div>
+          <button class="btn-draw" id="btnDraw">🎲 Выбрать победителя</button>
+
+          <div class="result-wrap" id="resultWrap">
+            <div class="winner-display" id="winnerDisplay">
+              <span class="winner-emoji">🏆</span>
+              <div id="singleWinner">
+                <p class="winner-label">Победитель</p>
+                <div class="winner-name" id="winnerName"></div>
+              </div>
+              <div
+                class="multiple-winners"
+                id="multipleWinners"
+                style="display: none"
+              ></div>
+            </div>
+            <button class="btn-again" id="btnAgain">↩ Провести ещё раз</button>
+          </div>
+
+          <p class="security-badge">
+            🔒 Данные участников не отправляются на сервер — всё работает в
+            браузере
+          </p>
         </div>
-        <button class="btn-again" id="btnAgain">↩ Провести ещё раз</button>
+
+        <article class="article">
+          <h2>Почему важно использовать рандомайзер для конкурса</h2>
+          <p>
+            Случайный выбор победителя через рандомайзер — это прозрачно и
+            честно. Подписчики доверяют результату больше, когда видят, что
+            выбор был автоматическим, а не ручным.
+          </p>
+          <h2>Как оформить результат конкурса</h2>
+          <p>
+            Сделайте скриншот экрана с именем победителя и опубликуйте его
+            вместе с объявлением результатов. Это повышает доверие аудитории к
+            вашим будущим конкурсам.
+          </p>
+        </article>
+
+        <div class="related">
+          <h2>Другие инструменты</h2>
+          <ul>
+            <li>
+              <a href="./index.html"
+                >Рандомайзер победителя — выбрать победителя розыгрыша онлайн</a
+              >
+            </li>
+            <li>
+              <a href="./randomaizer-vk.html"
+                >Рандомайзер для конкурса ВКонтакте — выбрать победителя в ВК</a
+              >
+            </li>
+            <li>
+              <a href="./sluchain-vybor-cheloveka.html"
+                >Случайный выбор человека из списка онлайн — рандомайзер имён</a
+              >
+            </li>
+            <li>
+              <a href="./giveaway-randomaizer.html"
+                >Рандомайзер для гивэея — выбрать победителя гивэей онлайн
+                бесплатно</a
+              >
+            </li>
+            <li>
+              <a href="./rozygrysh-pobediteley.html"
+                >Розыгрыш победителей онлайн — рандомайзер для розыгрыша
+                призов</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
+    </main>
 
-      <p class="security-badge">🔒 Данные участников не отправляются на сервер — всё работает в браузере</p>
-    </div>
+    <footer class="site-footer">
+      <div class="container">
+        Winner Random · случайный выбор честно и прозрачно
+      </div>
+    </footer>
 
-    <article class="article">
-<h2>Почему важно использовать рандомайзер для конкурса</h2>
-<p>Случайный выбор победителя через рандомайзер — это прозрачно и честно. Подписчики доверяют результату больше, когда видят, что выбор был автоматическим, а не ручным.</p>
-<h2>Как оформить результат конкурса</h2>
-<p>Сделайте скриншот экрана с именем победителя и опубликуйте его вместе с объявлением результатов. Это повышает доверие аудитории к вашим будущим конкурсам.</p>
-    </article>
-
-    <div class="related">
-      <h2>Другие инструменты</h2>
-      <ul>
-      <li><a href="./index.html">Рандомайзер победителя — выбрать победителя розыгрыша онлайн</a></li>
-      <li><a href="./randomaizer-vk.html">Рандомайзер для конкурса ВКонтакте — выбрать победителя в ВК</a></li>
-      <li><a href="./sluchain-vybor-cheloveka.html">Случайный выбор человека из списка онлайн — рандомайзер имён</a></li>
-      <li><a href="./giveaway-randomaizer.html">Рандомайзер для гивэея — выбрать победителя гивэей онлайн бесплатно</a></li>
-      <li><a href="./rozygrysh-pobediteley.html">Розыгрыш победителей онлайн — рандомайзер для розыгрыша призов</a></li>
-      </ul>
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">Winner Random · случайный выбор честно и прозрачно</div>
-</footer>
-
-<script src="./assets/tool.js"></script>
-</body>
+    <script src="./assets/tool.js"></script>
+  </body>
 </html>
