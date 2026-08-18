@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Winner Random — стили
+   Палитра: фиолетово-розовый градиент, праздничный стиль
+   ========================================================================== */
+
+:root {
+  --bg: #0d0d1a;
+  --bg-soft: #13132a;
+  --card: #1a1a35;
+  --card-border: #2d2d5e;
+  --text: #f0eeff;
+  --text-muted: #9b8fc4;
+  --accent: #c84bff;
+  --accent2: #ff4b8b;
+  --positive: #4bffb5;
+  --radius: 16px;
+  --max-width: 860px;
+  --shadow: 0 24px 60px rgba(200, 75, 255, 0.15);
+  --grad: linear-gradient(135deg, #c84bff 0%, #ff4b8b 100%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #1a0a2e 0%, #0d0d1a 60%);
+  color: var(--text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Header ---------- */
+.site-header { padding: 20px 0; border-bottom: 1px solid var(--card-border); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: "Manrope", sans-serif; font-weight: 800; font-size: 19px; color: var(--text); text-decoration: none; }
+.brand img { width: 32px; height: 32px; }
+.brand span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+nav.site-nav { display: flex; gap: 16px; flex-wrap: wrap; }
+nav.site-nav a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.15s; }
+nav.site-nav a:hover, nav.site-nav a.active { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 52px 0 20px; text-align: center; }
+.hero h1 { font-family: "Manrope", sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin: 0 0 14px; letter-spacing: -0.01em; }
+.hero h1 span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero p.lead { color: var(--text-muted); font-size: 17px; max-width: 620px; margin: 0 auto; }
+
+/* ---------- Main card ---------- */
+.tool-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; margin: 28px 0; }
+
+/* ---------- Textarea ---------- */
+.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.field label { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+.field label span { font-weight: 400; color: var(--text-muted); margin-left: 6px; }
+textarea#participants {
+  background: var(--bg-soft);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 160px;
+  outline: none;
+  transition: border-color 0.15s;
+  line-height: 1.7;
+}
+textarea#participants:focus { border-color: var(--accent); }
+textarea#participants::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+/* ---------- Options row ---------- */
+.options-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.options-row label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-muted); cursor: pointer; }
+.options-row input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--accent); }
+.options-row input[type="number"] { width: 64px; background: var(--bg-soft); border: 1px solid var(--card-border); color: var(--text); border-radius: 8px; padding: 6px 10px; font-size: 14px; font-family: inherit; outline: none; }
+.options-row input[type="number"]:focus { border-color: var(--accent); }
+
+/* ---------- Button ---------- */
+.btn-draw {
+  width: 100%;
+  padding: 18px;
+  background: var(--grad);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: opacity 0.15s, transform 0.1s;
+  box-shadow: 0 8px 30px rgba(200, 75, 255, 0.35);
+}
+.btn-draw:hover { opacity: 0.92; }
+.btn-draw:active { transform: scale(0.98); }
+.btn-draw:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ---------- Result ---------- */
+.result-wrap { margin-top: 24px; display: none; }
+.result-wrap.visible { display: block; }
+
+.winner-display {
+  background: var(--bg-soft);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.winner-display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(200,75,255,0.07), rgba(255,75,139,0.07));
+  pointer-events: none;
+}
+
+.winner-emoji { font-size: 48px; display: block; margin-bottom: 8px; }
+
+.winner-label { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+
+.winner-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 4vw, 36px);
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  word-break: break-word;
+  min-height: 44px;
+}
+
+.winner-name.spinning { -webkit-text-fill-color: var(--text-muted); background: none; }
+
+.multiple-winners { margin-top: 12px; }
+.multiple-winners .w-item {
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.multiple-winners .w-item .place { color: var(--text-muted); font-size: 13px; min-width: 28px; }
+
+.btn-again {
+  margin-top: 16px;
+  width: 100%;
+  padding: 13px;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-again:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- Counter ---------- */
+.counter { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+.counter span { color: var(--accent); font-weight: 700; }
+
+/* ---------- Security badge ---------- */
+.security-badge { margin-top: 14px; font-size: 12px; color: var(--text-muted); }
+
+/* ---------- Article ---------- */
+.section-title { font-family: "Manrope", sans-serif; font-weight: 800; font-size: 24px; margin: 48px 0 8px; }
+.article { margin: 48px 0; color: var(--text-muted); font-size: 15px; }
+.article h2 { color: var(--text); font-family: "Manrope", sans-serif; font-size: 21px; margin: 28px 0 10px; }
+.article ul { padding-left: 20px; }
+.article a { color: var(--accent); }
+
+/* ---------- Related ---------- */
+.related { margin: 40px 0; padding: 22px; background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); }
+.related h2 { font-family: "Manrope", sans-serif; font-size: 18px; margin: 0 0 12px; }
+.related ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.related a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--card-border); display: block; padding: 6px 0; }
+.related a:hover { color: var(--accent); }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--card-border); margin-top: 60px; padding: 28px 0 40px; color: var(--text-muted); font-size: 13px; text-align: center; }
+
+/* ---------- Confetti animation ---------- */
+@keyframes confetti-fall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(120px) rotate(720deg); opacity: 0; }
+}
+.confetti-piece {
+  position: absolute;
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  animation: confetti-fall 1s ease-in forwards;
+  pointer-events: none;
+}
